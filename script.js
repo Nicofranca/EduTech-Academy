@@ -18,9 +18,18 @@ formulario.addEventListener('input', (event) => {
         .then((response) => response.json())
         .then((data) => {
 
-            
+            const ruaCEP = data.logradouro;
+            const bairroCEP = data.bairro;
+            const cidadeCEP = data.localidade;
+            const estadoCEP = data.estado;
 
             console.log(data);
+
+            rua.value = ruaCEP;
+            bairro.value = bairroCEP;
+            cidade.value = cidadeCEP;
+            estado.value = estadoCEP;
+
 
         })
     }
